@@ -1,7 +1,7 @@
 -- Autoservice database schema
 -- Generated from the supplied autoservice_db_model.mwb on 2026-11-03.
 -- Structure only: no records or customer information included.
--- The auto-increment flag on order_service.id_order is preserved from the source model.
+-- Corrected order_service.id_order: removed AUTO_INCREMENT.
 -- Review that column before using this model outside an educational setting.
 
 CREATE DATABASE IF NOT EXISTS `autoservice_db`
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `order_part` (
 
 -- order_service
 CREATE TABLE IF NOT EXISTS `order_service` (
-  `id_order` INT NOT NULL AUTO_INCREMENT,
+  `id_order` INT NOT NULL,
   `id_service` INT NOT NULL,
   `quantity` INT NOT NULL,
   `cost` DECIMAL(10,2) NOT NULL,
